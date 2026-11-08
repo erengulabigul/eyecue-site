@@ -1,0 +1,110 @@
+:root {
+  --bg: #ffffff;
+  --text: #16171d;
+  --muted: #5d606b;
+  --card: #f4f4f6;
+  --border: #e4e4e8;
+  --accent: #e8304d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0f14;
+    --text: #f2f2f5;
+    --muted: #a3a6b1;
+    --card: #1a1c23;
+    --border: #2a2d36;
+    --accent: #ff3b57;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+header.site img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+header.site a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+  font-size: 15px;
+}
+
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text); }
+
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 36px 0 8px; }
+h3 { font-size: 18px; margin: 24px 0 4px; }
+
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+a { color: var(--accent); }
+
+.hero { text-align: center; padding: 24px 0 8px; }
+.hero img { width: 112px; height: 112px; border-radius: 26px; }
+.hero p { font-size: 20px; color: var(--muted); margin-top: 4px; }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 32px 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.card strong { display: block; margin-bottom: 4px; }
+.card span { color: var(--muted); font-size: 15px; }
+
+.summary {
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 20px 0;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
